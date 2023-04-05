@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './dist/css/gigpost.css'
 import { ChakraProvider } from '@chakra-ui/react'
 import { RouterProvider } from 'react-router-dom';
 import routes from './routes';
