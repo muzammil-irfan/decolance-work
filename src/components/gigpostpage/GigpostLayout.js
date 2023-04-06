@@ -14,7 +14,7 @@ const steps = [
         content: 'Pricing',
     },
     {
-        title: <h1>Description & FAQ</h1>,
+        title: <h1 >Description & FAQ</h1>,
         content: <h1>Description & FAQ</h1>,
     },
     {
@@ -44,7 +44,7 @@ const GigPostLayout = () => {
         title: item.title,
     }));
     const contentStyle = {
-        lineHeight: '260px',
+        lineHeight: '100vh',
         textAlign: 'center',
         // color: token.colorTextTertiary,
         // backgroundColor: token.colorFillAlter,
