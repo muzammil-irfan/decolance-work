@@ -2,6 +2,17 @@
 
 
 font-weight: 700 !important;
+font-size: 30px;
 /* margin-right: 30px; */
 
+}
+.tag_input_gigpost>div>div{
+    height: auto;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.center_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
