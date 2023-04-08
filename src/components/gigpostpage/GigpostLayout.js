@@ -9,40 +9,42 @@ import GigDescription from "./description/GigDescription";
 import GigRequirement from "./requirements/GigRequirement";
 import GigPublish from "./publish/GigPublish";
 import GigGallery from "./gallery/GigGallery";
-const steps = [
-  {
-    title: <Box display={{ base: "none", md: "block" }}>Overview</Box>,
-    content: <GigOverview />,
-  },
-  {
-    title: <Box display={{ base: "none", md: "block" }}>Pricing</Box>,
-    content: <GigPricing />,
-  },
-  {
-    title: <Box display={{ base: "none", md: "block" }}>Description & FAQ</Box>,
-    content: <GigDescription />,
-  },
-  {
-    title: <Box display={{ base: "none", md: "block" }}>Requirements</Box>,
-    content: <GigRequirement />,
-  },
-  {
-    title: <Box display={{ base: "none", md: "block" }}>Gallery</Box>,
-    content: <GigGallery />,
-  },
-  {
-    title: <Box display={{ base: "none", md: "block" }}>Publish</Box>,
-    content: <GigPublish />,
-  },
-];
+
 const GigPostLayout = () => {
+
   const { token } = theme.useToken();
   const [current, setCurrent] = useState(0);
-  const next = () => {
-    setCurrent(current + 1);
-  };
   const prev = () => {
     setCurrent(current - 1);
+  };
+  const steps = [
+    {
+      title: <Box display={{ base: "none", md: "block" }}>Overview</Box>,
+      content: <GigOverview />,
+    },
+    {
+      title: <Box display={{ base: "none", md: "block" }}>Pricing</Box>,
+      content: <GigPricing />,
+    },
+    {
+      title: <Box display={{ base: "none", md: "block" }}>Description & FAQ</Box>,
+      content: <GigDescription />,
+    },
+    {
+      title: <Box display={{ base: "none", md: "block" }}>Requirements</Box>,
+      content: <GigRequirement />,
+    },
+    {
+      title: <Box display={{ base: "none", md: "block" }}>Gallery</Box>,
+      content: <GigGallery />,
+    },
+    {
+      title: <Box display={{ base: "none", md: "block" }}>Publish</Box>,
+      content: <GigPublish prev={prev} />,
+    },
+  ];
+  const next = () => {
+    setCurrent(current + 1);
   };
   const items = steps.map((item) => ({
     key: item.title,
@@ -81,7 +83,7 @@ const GigPostLayout = () => {
       >
         {current < steps.length - 1 && (
           <Button type="primary" onClick={() => next()}>
-            Next
+            Save & continue
           </Button>
         )}
         {current === steps.length - 1 && <GigPostDone />}
@@ -92,7 +94,7 @@ const GigPostLayout = () => {
             }}
             onClick={() => prev()}
           >
-            Previous
+            Go Back
           </Button>
         )}
       </div>

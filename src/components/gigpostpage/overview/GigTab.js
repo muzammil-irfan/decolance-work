@@ -9,7 +9,9 @@ import {
   Stack,
   RadioGroup,
   Radio,
+  Text,
 } from "@chakra-ui/react";
+import RadioInputs from "./Radio";
 
 export default function () {
   return (
@@ -23,16 +25,16 @@ export default function () {
           borderBottomWidth="1px"
         >
           <Tab _selected={{  backgroundColor: "#eeeeee",}} width={"100%"}>
-            Tab 1
+            Style
           </Tab>
           <Tab width={"100%"} _selected={{   backgroundColor: "#eeeeee" }}
            borderLeftWidth="1px" 
            borderRightWidth="1px"
           >
-            Tab 2
+           Logo Type
           </Tab>
           <Tab _selected={{ backgroundColor: "#eeeeee",}} width={"100%"}>
-            Tab 3
+            File Format
           </Tab>
         </TabList>
         <Box
@@ -43,12 +45,12 @@ export default function () {
           alignItems={"center"}
           justifyContent={"flex-start"}
         >
-          Select your logo style*
+          Select your logo style <Text color={"red.400"}>*</Text>
         </Box>
 
         <TabPanels lineHeight={"normal"}>
           <TabPanel>
-            <p>Tab 1 content</p>
+            <RadioInputs/>
           </TabPanel>
           <TabPanel>
             <p>Tab 2 content</p>

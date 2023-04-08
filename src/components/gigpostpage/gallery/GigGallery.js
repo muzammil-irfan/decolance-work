@@ -1,10 +1,10 @@
-import { Box, Flex, Stack } from "@chakra-ui/react";
+import { Box, Checkbox, Flex, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import { InputRowGrid } from "../overview/GigOverview";
 import GigUploadFile, { ImagePicker } from "./GigUploadFile";
 import { BiImageAdd } from "react-icons/bi";
 import { AiOutlineVideoCameraAdd } from "react-icons/ai";
-import { GrDocumentPdf } from "react-icons/gr";
+import { VscFilePdf } from "react-icons/vsc";
 
 function GigGallery() {
   return (
@@ -61,16 +61,28 @@ function GigGallery() {
           "Show some of the best work you created in a document (PDFs only)."
         }
         input={
-          <Box className="">
+          <Flex className="" gap={2}>
             <ImagePicker
               acceptImageType={"application/pdf"}
-              demoIcon={<GrDocumentPdf fontSize={"60px"} color={"#c7c7c7"} />}
+              demoIcon={<VscFilePdf fontSize={"60px"} color={"#c7c7c7"} />}
               demoText={"Drag & drop a Pdf or "}
               demoText2={"Browse "}
             />
-          </Box>
+             <ImagePicker
+              acceptImageType={"application/pdf"}
+              demoIcon={<VscFilePdf fontSize={"60px"} color={"#c7c7c7"} />}
+              demoText={"Drag & drop a Pdf or "}
+              demoText2={"Browse "}
+            />
+          </Flex>
         }
       />
+      <InputRowGrid
+         
+         input={<Flex borderTopWidth={"1px"} pt={4} alignItems={"flex-start"} textAlign={"left"} gap={2}><Checkbox></Checkbox> <Text>I declare that these materials were created by myself or by my team and do not infringe on any 3rd 
+         party rights. I understand that the illegal use of digital assets is against Fiverr’s Terms of Service and 
+         may result in blocking my account.</Text></Flex>}
+       />
     </Stack>
   );
 }

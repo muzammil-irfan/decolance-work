@@ -2,7 +2,7 @@ import { Box, Button, Flex, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
 import GigPostDone from '../overview/GigpostDone'
 
-function GigPublish() {
+function GigPublish({prev}) {
   return (
     <Stack>
         <Box
@@ -37,7 +37,7 @@ lineHeight={"none"}
         Lets publish your Gig and get some buyers rolling in.
         </Text>
         <Flex my={2} justifyContent={"center"} gap={4}>
-            <Button >Go Back </Button>
+            <Button  onClick={()=>prev()}>Go Back </Button>
            <GigPostDone/>
         </Flex>
     </Stack>
