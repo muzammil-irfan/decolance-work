@@ -16,3 +16,16 @@ font-size: 30px;
     justify-content: center;
     align-items: center;
 }
+.text_editor>div .ck-editor__main>div{
+    min-height: 200px;
+    
+    
+}
+.text_editor>div{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.text_editor>div .ck-editor__top{
+    border-bottom: 1px solid #cecece ;
+
+} 

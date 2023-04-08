@@ -1,10 +1,13 @@
 import "../../dist/css/gigpost.css";
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, border } from "@chakra-ui/react";
 import { Button, message, Steps, theme } from "antd";
 import { useState } from "react";
 import GigOverview from "./overview/GigOverview";
 import GigPostDone from "./overview/GigpostDone";
 import GigPricing from "./pricing/GigPricing";
+import GigDescription from "./description/GigDescription";
+import GigRequirement from "./requirements/GigRequirement";
+import GigPublish from "./publish/GigPublish";
 const steps = [
   {
     title:  <Box  display={{base:"none",md:"block"}}>Overview</Box>,
@@ -16,11 +19,11 @@ const steps = [
   },
   {
     title: <Box  display={{base:"none",md:"block"}}>Description & FAQ</Box>,
-    content: <Box  display={{base:"none",md:"none"}}>Description & FAQ</Box>,
+    content: <GigDescription/>,
   },
   {
     title:  <Box  display={{base:"none",md:"block"}}>Requirements</Box>,
-    content: <h1>Requirements</h1>,
+    content: <GigRequirement/>,
   },
   {
     title:  <Box  display={{base:"none",md:"block"}}>Gallery</Box>,
@@ -28,7 +31,7 @@ const steps = [
   },
   {
     title:  <Box  display={{base:"none",md:"block"}}>Publish</Box>,
-    content: <h1>Publish</h1>,
+    content: <GigPublish/>,
   },
 ];
 const GigPostLayout = () => {
@@ -69,7 +72,13 @@ const GigPostLayout = () => {
       </Flex>
       <div
         style={{
-          marginTop: 24,
+          marginTop: 44,
+          display:"flex",
+          justifyContent:"flex-end",
+          borderTop:"1px solid #c5c5c5",
+          paddingTop:20,
+          
+
         }}
       >
         {current < steps.length - 1 && (
@@ -78,7 +87,7 @@ const GigPostLayout = () => {
           </Button>
         )}
         {current === steps.length - 1 && <GigPostDone />}
-        {current > 0 && (
+        {current > 0 && current < steps.length - 1&&(
           <Button
             style={{
               margin: "0 8px",

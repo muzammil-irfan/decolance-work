@@ -72,12 +72,13 @@ export default function GigOverview() {
   );
 }
 
-const InputRowGrid = ({ heading, text, input }) => (
+export const InputRowGrid = ({ heading, text, input }) => (
   <SimpleGrid column={{ base: 1, md: 2, lg: 2 }} lineHeight={"normal"}>
     <Stack flexDirection={{ base: "column", md: "row" }}>
       <Box w={{ base: "100%", md: "25%" }}>
         <Heading
           fontWeight={"semibold"}
+          mt={"10px"}
           fontSize={{ base: "20px", lg: "30px" }}
           textAlign={{ base: "", md: "start" }}
         >
@@ -92,7 +93,9 @@ const InputRowGrid = ({ heading, text, input }) => (
           lineHeight={{ base: "22px", md: "32px" }}
         >
           {text}
+          
         </Text>
+        
         {input}
       </Box>
     </Stack>
