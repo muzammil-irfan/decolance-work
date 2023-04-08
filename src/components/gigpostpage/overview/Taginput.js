@@ -56,7 +56,7 @@ const tagRender = (props) => {
 };
 const TagsInput = () => (
   <Select
-    mode="multiple"
+    mode="tags"
     showArrow
     tagRender={tagRender}
     className="tag_input_gigpost"
@@ -65,8 +65,9 @@ const TagsInput = () => (
       
     }}
     suffixIcon={null}
-    options={options}
+    // options={options}
     maxLength={5}
+  
   />
 );
 export default TagsInput;
