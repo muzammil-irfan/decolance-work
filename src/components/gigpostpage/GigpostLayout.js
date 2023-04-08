@@ -8,6 +8,7 @@ import GigPricing from "./pricing/GigPricing";
 import GigDescription from "./description/GigDescription";
 import GigRequirement from "./requirements/GigRequirement";
 import GigPublish from "./publish/GigPublish";
+import GigGallery from "./gallery/GigGallery";
 const steps = [
   {
     title:  <Box  display={{base:"none",md:"block"}}>Overview</Box>,
@@ -27,7 +28,7 @@ const steps = [
   },
   {
     title:  <Box  display={{base:"none",md:"block"}}>Gallery</Box>,
-    content: <h1>Gallery</h1>,
+    content: <GigGallery/>
   },
   {
     title:  <Box  display={{base:"none",md:"block"}}>Publish</Box>,
