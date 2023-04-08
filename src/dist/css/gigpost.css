@@ -29,3 +29,15 @@ font-size: 30px;
     border-bottom: 1px solid #cecece ;
 
 } 
+
+.gallery_upload>span>div{
+    display: flex;
+    justify-content: flex-start !important;
+}
+
+.gallery_upload>span>div>div{
+    border: 1px solid #cecece !important;
+    border-radius: 10px;
+    width: 200px !important;
+    height: 180px !important;
+}

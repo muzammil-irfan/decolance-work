@@ -79,7 +79,7 @@ export const InputRowGrid = ({ heading, text, input }) => (
         <Heading
           fontWeight={"semibold"}
           mt={"10px"}
-          fontSize={{ base: "20px", lg: "30px" }}
+          fontSize={{ base: "20px", lg: "26px" }}
           textAlign={{ base: "", md: "start" }}
         >
           {heading}
