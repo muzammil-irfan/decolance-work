@@ -1,26 +1,8 @@
-import { Box, Icon } from "@chakra-ui/react";
+import { Box,  } from "@chakra-ui/react";
 import { Select, Tag } from "antd";
-import { FaTimes } from "react-icons/fa";
 
-const options = [
-  {
-    value: "3D Logo",
-  },
-  {
-    value: "Banner",
-  },
-  {
-    value: "Flayer",
-  },
-  {
-    value: "Poster",
-  },
-  {
-    value: "Social Media",
-  }
-];
 const tagRender = (props) => {
-  const { label, value, closable, onClose } = props;
+  const { label,  onClose } = props;
   const onPreventMouseDown = (event) => {
     event.preventDefault();
     event.stopPropagation();
@@ -62,12 +44,10 @@ const TagsInput = () => (
     className="tag_input_gigpost"
     style={{
       width: "100%",
-      
     }}
     suffixIcon={null}
     // options={options}
     maxLength={5}
-  
   />
 );
 export default TagsInput;

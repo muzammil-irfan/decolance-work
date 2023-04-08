@@ -93,9 +93,8 @@ export const InputRowGrid = ({ heading, text, input }) => (
           lineHeight={{ base: "22px", md: "32px" }}
         >
           {text}
-          
         </Text>
-        
+
         {input}
       </Box>
     </Stack>

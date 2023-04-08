@@ -36,17 +36,24 @@ function GigPricing() {
             Add extra services
           </Heading>
         </Box>
-        <ExtraServiceTable/>
-        <ExtraServiceRow label={"Additional revision"}/>
-        <ExtraServiceRow label={"Additional logo"}/>
-        <ExtraServiceRow label={"Source file"}/>
-        <ExtraServiceRow label={"3D mockup"}/>
-        <ExtraServiceRow label={"Vector file"}/>
-        <ExtraServiceRow label={"Logo "}/>
-        <Box cursor={"pointer"} lineHeight={"normal"} display={"flex"}alignItems={"center"} gap={2} p={2}>
-  <AiFillPlusCircle color="#008ddb" fontSize={"24px"}/>
-  <Text  color="#008ddb" >Add Gig extra</Text>
-</Box>
+        <ExtraServiceTable />
+        <ExtraServiceRow label={"Additional revision"} />
+        <ExtraServiceRow label={"Additional logo"} />
+        <ExtraServiceRow label={"Source file"} />
+        <ExtraServiceRow label={"3D mockup"} />
+        <ExtraServiceRow label={"Vector file"} />
+        <ExtraServiceRow label={"Logo "} />
+        <Box
+          cursor={"pointer"}
+          lineHeight={"normal"}
+          display={"flex"}
+          alignItems={"center"}
+          gap={2}
+          p={2}
+        >
+          <AiFillPlusCircle color="#008ddb" fontSize={"24px"} />
+          <Text color="#008ddb">Add Gig extra</Text>
+        </Box>
       </Stack>
     </>
   );

@@ -12,8 +12,9 @@ function ExtraServiceTable() {
           <Td colSpan={3} display={"flex"} gap={4}>
             {" "}
             <FormCheckBox />{" "}
-            <Text fontWeight={"bold"} fontSize={"20px"} color= "#c5c5c5">Extra Fast Delivery</Text>
-
+            <Text fontWeight={"bold"} fontSize={"20px"} color="#c5c5c5">
+              Extra Fast Delivery
+            </Text>
           </Td>
         </Tr>
         <Tr display={"flex"} justifyContent={"space-between"}>
