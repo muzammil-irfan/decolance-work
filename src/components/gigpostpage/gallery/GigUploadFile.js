@@ -48,16 +48,17 @@ export function ImagePicker({
   };
 
   return (
-    <div
+    <Box
       style={{
-        width: "200px",
-        height: "180px",
+      
         border: "1px solid #cecece",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         cursor: "pointer",
       }}
+      w={{base:"160px",md:"200px","lg":"200px"}}
+      h={{base:"140px",md:"180px","lg":"180px"}}
       onDrop={handleDrop}
       onDragOver={handleDragOver}
       onClick={handleClick}
@@ -84,6 +85,6 @@ export function ImagePicker({
           <Text color={"#008ddb"}>{demoText2}</Text>
         </Box>
       )}
-    </div>
+    </Box>
   );
 }

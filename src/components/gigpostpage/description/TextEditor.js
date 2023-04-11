@@ -8,12 +8,12 @@ const TextEditor = () => {
 
   return (
     
-       <Box display={"flex"} className='text_editor'>
+       <Box display={"flex"} className='text_editor' m={"0 auto"} width={{base:"90%",'lg':"100%"}}>
 
         <CKEditor
         
             editor={ ClassicEditor }
-            
+            style={{width:"300px"}}
             data=""
             onReady={ editor => {
                 // You can store the "editor" and use when it is needed.

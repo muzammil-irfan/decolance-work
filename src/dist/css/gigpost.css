@@ -16,10 +16,12 @@ font-size: 30px;
     justify-content: center;
     align-items: center;
 }
-.text_editor>div .ck-editor__main>div{
+.text_editor>div .ck-editor__main>div {
     min-height: 200px;
-    
-    
+   
+}
+.text_editor>div {
+    width: 100% !important; 
 }
 .text_editor>div{
     display: flex;

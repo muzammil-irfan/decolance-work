@@ -26,7 +26,7 @@ export default function StepsSideBar({children}) {
          size={"xs"}
         style={{ backgroundColor:"red"}} onClose={onClose} isOpen={isOpen}>
           <DrawerOverlay />
-          <DrawerContent mt={20} width={"270px"} borderTopRightRadius={"20px"}
+          <DrawerContent mt={0} width={"270px"} borderTopRightRadius={"20px"}
           
           >
             <DrawerHeader p={0}>
@@ -45,7 +45,7 @@ export default function StepsSideBar({children}) {
          </Box>
 
             </DrawerHeader>
-            <DrawerBody display={"flex"} justifyContent={"center"} >
+            <DrawerBody display={"flex"} justifyContent={"center"}  >
 
            {children}
             </DrawerBody>
