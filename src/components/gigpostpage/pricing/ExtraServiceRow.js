@@ -21,7 +21,7 @@ function ExtraServiceRow({ label }) {
        w={{base:"full"}} 
        py={{base:"4px"}}
        mb={{base:2}}
-       borderBottomWidth={{base:"1px"}}
+       borderBottomWidth={{base:"1px",md:"0px"}}
        >
       <FormCheckBox />
       <Text
