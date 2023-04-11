@@ -17,7 +17,7 @@ function ExtraServiceTable() {
             </Text>
           </Td>
         </Tr>
-        <Tr display={"flex"} justifyContent={"space-between"}>
+        <Tr display={"flex"} justifyContent={"space-between"} flexDirection={{base:"column",lg:"row"}}>
           <Td
             borderRightWidth={"1px"}
             w={"full"}

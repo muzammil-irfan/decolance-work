@@ -15,6 +15,7 @@ function GigPricing() {
             fontWeight={"semibold"}
             fontSize={{ base: "20px", lg: "30px" }}
             textAlign={{ base: "", md: "start" }}
+            display={{base:"none"}}
           >
             Packages
           </Heading>
@@ -26,6 +27,7 @@ function GigPricing() {
           </Link>
         </Box>
         <PakegesTable />
+        <Box >
         <Box display={"flex"} alignItems={"baseline"} gap={4}>
           {" "}
           <Heading
@@ -37,6 +39,7 @@ function GigPricing() {
           </Heading>
         </Box>
         <ExtraServiceTable />
+        </Box>
         <ExtraServiceRow label={"Additional revision"} />
         <ExtraServiceRow label={"Additional logo"} />
         <ExtraServiceRow label={"Source file"} />

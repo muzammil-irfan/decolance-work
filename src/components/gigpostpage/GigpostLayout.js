@@ -9,6 +9,7 @@ import GigDescription from "./description/GigDescription";
 import GigRequirement from "./requirements/GigRequirement";
 import GigPublish from "./publish/GigPublish";
 import GigGallery from "./gallery/GigGallery";
+import StepsSideBar from "./StepsSideBar";
 
 const GigPostLayout = () => {
 
@@ -19,27 +20,27 @@ const GigPostLayout = () => {
   };
   const steps = [
     {
-      title: <Box display={{ base: "none", md: "block" }}>Overview</Box>,
+      title: <Box >Overview</Box>,
       content: <GigOverview />,
     },
     {
-      title: <Box display={{ base: "none", md: "block" }}>Pricing</Box>,
+      title: <Box >Pricing</Box>,
       content: <GigPricing />,
     },
     {
-      title: <Box display={{ base: "none", md: "block" }}>Description & FAQ</Box>,
+      title: <Box >Description & FAQ</Box>,
       content: <GigDescription />,
     },
     {
-      title: <Box display={{ base: "none", md: "block" }}>Requirements</Box>,
+      title: <Box >Requirements</Box>,
       content: <GigRequirement />,
     },
     {
-      title: <Box display={{ base: "none", md: "block" }}>Gallery</Box>,
+      title: <Box >Gallery</Box>,
       content: <GigGallery />,
     },
     {
-      title: <Box display={{ base: "none", md: "block" }}>Publish</Box>,
+      title: <Box >Publish</Box>,
       content: <GigPublish prev={prev} />,
     },
   ];
@@ -53,13 +54,27 @@ const GigPostLayout = () => {
   const contentStyle = {
     lineHeight: "100vh",
     textAlign: "center",
-    borderLeft: `2px solid ${token.colorBorder}`,
-    width: "80%",
+    width: "98%",
   };
   return (
     <>
+    
+        <StepsSideBar>
+          <Box >
+          <Steps
+            current={current}
+            className="gigpost_Container_steps"
+            items={items}
+            direction={"vertical"}
+            responsive={true}
+            size="small"
+            labelPlacement="vertical"
+          />
+        
+          </Box>
+          </StepsSideBar>
       <Flex>
-        <Box px={{ base: "0", md: "10" }} gap={5}>
+        <Box px={{ base: "0", md: "10" }} display={{base:"none",md:"none",lg:"block"}} gap={{lg:"5"}}>
           <Steps
             current={current}
             className="gigpost_Container_steps"
@@ -70,16 +85,20 @@ const GigPostLayout = () => {
             labelPlacement="vertical"
           />
         </Box>
-        <Box style={contentStyle}>{steps[current].content}</Box>
+        <Box style={contentStyle}
+         borderLeft={{ sm:"none", md:"none",lg:`2px solid ${token.colorBorder}`}}
+         
+         >
+          {steps[current].content}</Box>
       </Flex>
-      <div
+      <Box
         style={{
           marginTop: 44,
           display: "flex",
-          justifyContent: "flex-end",
           borderTop: "1px solid #c5c5c5",
           paddingTop: 20,
         }}
+        justifyContent={{base:"space-evenly",md:"flex-end",lg:"flex-end"}}
       >
         {current < steps.length - 1 && (
           <Button type="primary" onClick={() => next()}>
@@ -97,7 +116,7 @@ const GigPostLayout = () => {
             Go Back
           </Button>
         )}
-      </div>
+      </Box>
     </>
   );
 };

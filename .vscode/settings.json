@@ -1,0 +1,10 @@
+{
+    "editor.tabCompletion": "on",
+    "workbench.editor.tabSizing": "fit",
+    "workbench.editor.titleScrollbarSizing": "large",
+    "workbench.editor.pinnedTabSizing": "normal",
+    "workbench.editor.revealIfOpen": false,
+    "editor.tabFocusMode": false,
+    "workbench.editor.splitInGroupLayout": "vertical",
+    "workbench.editor.wrapTabs": true
+}

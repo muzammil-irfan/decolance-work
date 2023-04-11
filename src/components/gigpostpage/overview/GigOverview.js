@@ -30,7 +30,7 @@ export default function GigOverview() {
           input={
             <Textarea
               placeholder="I will do something i am really good at"
-              size={{ base: "sm", md: "lg" }}
+              size={{ base: "xs", md: "lg" }}
             />
           }
         />
@@ -61,7 +61,11 @@ export default function GigOverview() {
             </Grid>
           }
         />
-        <InputRowGrid heading={"Gig metadata:"} input={<GigTab />} />
+        <Box display={{base:"none",md:"none",lg:"block"}}>
+        <InputRowGrid heading={"Gig metadata:"} input={<GigTab />}  />
+
+        </Box>
+
         <InputRowGrid
           heading={"Search tag"}
           text={
@@ -71,11 +75,11 @@ export default function GigOverview() {
         />
         <InputRowGrid
          
-          input={<Flex justifyContent={"flex-end"}><Text>5 tags maximum . </Text><Text color={"#c7c7c7"}>Use letter and number only</Text></Flex>}
+          input={<Flex justifyContent={"flex-end"}><Text fontSize={{base:"xs",md:"md",lg:"lg"}}>5 tags maximum . </Text><Text fontSize={{base:"xs",md:"md",lg:"lg"}} color={"#c7c7c7"}>Use letter and number only</Text></Flex>}
         />
          <InputRowGrid
          
-         input={<Flex alignItems={"flex-start"} textAlign={"left"} gap={2}><Checkbox></Checkbox> <Text>I declare that these materials were created by myself or by my team and do not infringe on any 3rd 
+         input={<Flex alignItems={"flex-start"} textAlign={"left"} gap={2}><Checkbox></Checkbox> <Text fontSize={{base:"xs",md:"md",lg:"lg"}}> I declare that these materials were created by myself or by my team and do not infringe on any 3rd 
          party rights. I understand that the illegal use of digital assets is against Fiverr’s Terms of Service and 
          may result in blocking my account.</Text></Flex>}
        />
@@ -103,7 +107,7 @@ export const InputRowGrid = ({ heading, text, input }) => (
           {heading}
         </Heading>
       </Box>
-      <Box w={{ base: "100%", md: "75%" }} gap={{ base: 10 }}>
+      <Box w={{ base: "100%", md: "75%" }} >
         <Text
           fontSize={{ base: "x-small", md: "sm" }}
           display={"flex"}

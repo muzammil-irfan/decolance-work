@@ -1,7 +1,5 @@
 import React from "react";
 
-import { PlusOutlined } from "@ant-design/icons";
-import { Modal, Upload } from "antd";
 import { useState, useRef } from "react";
 import { Box, Text } from "@chakra-ui/react";
 
