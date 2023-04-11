@@ -26,7 +26,7 @@ function ExtraServiceRow({ label }) {
       <FormCheckBox />
       <Text
         fontWeight={{lg:"600"}}
-        fontSize={"20px"}
+        fontSize={{base:"14px", md:"20px"}}
         color="#c5c5c5"
         w={"200px"}
         overflow={"hidden"}
