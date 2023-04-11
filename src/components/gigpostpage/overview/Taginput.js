@@ -1,8 +1,8 @@
-import { Box,  } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { Select, Tag } from "antd";
 
 const tagRender = (props) => {
-  const { label,  onClose } = props;
+  const { label, onClose } = props;
   const onPreventMouseDown = (event) => {
     event.preventDefault();
     event.stopPropagation();

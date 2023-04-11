@@ -47,13 +47,21 @@ export default function GigPostDone() {
               alignItems="center"
               flexDirection="column"
               color="white"
-              //   gap={5}
               backgroundPosition="center"
-              //   my={10}
             />
           </AlertDialogBody>
-          <Text lineHeight={"none"} my={2} color={"#008ddb"} fontSize={"38px"} fontWeight={"600"} m="auto"> You're Done</Text>
-          <Text lineHeight={"none"} my={4} textAlign={"center"} >
+          <Text
+            lineHeight={"none"}
+            my={2}
+            color={"#008ddb"}
+            fontSize={"38px"}
+            fontWeight={"600"}
+            m="auto"
+          >
+            {" "}
+            You're Done
+          </Text>
+          <Text lineHeight={"none"} my={4} textAlign={"center"}>
             No need to fill out From W-9. You can update your information from
             your profile settings.
           </Text>

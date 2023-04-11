@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import GigTab from "./GigTab";
 import TagsInput from "./Taginput";
-import {TiWarning} from "react-icons/ti"
+import { TiWarning } from "react-icons/ti";
 
 export default function GigOverview() {
   return (
@@ -61,9 +61,8 @@ export default function GigOverview() {
             </Grid>
           }
         />
-        <Box display={{base:"none",md:"none",lg:"block"}}>
-        <InputRowGrid heading={"Gig metadata:"} input={<GigTab />}  />
-
+        <Box display={{ base: "none", md: "none", lg: "block" }}>
+          <InputRowGrid heading={"Gig metadata:"} input={<GigTab />} />
         </Box>
 
         <InputRowGrid
@@ -74,21 +73,44 @@ export default function GigOverview() {
           input={<TagsInput />}
         />
         <InputRowGrid
-         
-          input={<Flex justifyContent={"flex-end"}><Text fontSize={{base:"xs",md:"md",lg:"lg"}}>5 tags maximum . </Text><Text fontSize={{base:"xs",md:"md",lg:"lg"}} color={"#c7c7c7"}>Use letter and number only</Text></Flex>}
+          input={
+            <Flex justifyContent={"flex-end"}>
+              <Text fontSize={{ base: "xs", md: "md", lg: "lg" }}>
+                5 tags maximum .{" "}
+              </Text>
+              <Text
+                fontSize={{ base: "xs", md: "md", lg: "lg" }}
+                color={"#c7c7c7"}
+              >
+                Use letter and number only
+              </Text>
+            </Flex>
+          }
         />
-         <InputRowGrid
-         
-         input={<Flex alignItems={"flex-start"} textAlign={"left"} gap={2}><Checkbox></Checkbox> <Text fontSize={{base:"xs",md:"md",lg:"lg"}}> I declare that these materials were created by myself or by my team and do not infringe on any 3rd 
-         party rights. I understand that the illegal use of digital assets is against Fiverr’s Terms of Service and 
-         may result in blocking my account.</Text></Flex>}
-       />
         <InputRowGrid
-         
-         input={<Flex  alignItems={"center"} gap={2}>
-          <TiWarning color="red" fontSize={30}  />
-          <Text fontWeight={"medium"}>Some categories require that sellers verify their skills.</Text></Flex>}
-       />
+          input={
+            <Flex alignItems={"flex-start"} textAlign={"left"} gap={2}>
+              <Checkbox></Checkbox>{" "}
+              <Text fontSize={{ base: "xs", md: "md", lg: "lg" }}>
+                {" "}
+                I declare that these materials were created by myself or by my
+                team and do not infringe on any 3rd party rights. I understand
+                that the illegal use of digital assets is against Fiverr’s Terms
+                of Service and may result in blocking my account.
+              </Text>
+            </Flex>
+          }
+        />
+        <InputRowGrid
+          input={
+            <Flex alignItems={"center"} gap={2}>
+              <TiWarning color="red" fontSize={30} />
+              <Text fontWeight={"medium"}>
+                Some categories require that sellers verify their skills.
+              </Text>
+            </Flex>
+          }
+        />
       </Stack>
     </>
   );
@@ -107,7 +129,7 @@ export const InputRowGrid = ({ heading, text, input }) => (
           {heading}
         </Heading>
       </Box>
-      <Box w={{ base: "100%", md: "75%" }} >
+      <Box w={{ base: "100%", md: "75%" }}>
         <Text
           fontSize={{ base: "x-small", md: "sm" }}
           display={"flex"}

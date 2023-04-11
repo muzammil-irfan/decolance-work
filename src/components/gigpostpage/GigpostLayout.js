@@ -1,6 +1,6 @@
 import "../../dist/css/gigpost.css";
-import { Box, Flex,  } from "@chakra-ui/react";
-import { Button,  Steps, theme } from "antd";
+import { Box, Flex } from "@chakra-ui/react";
+import { Button, Steps, theme } from "antd";
 import { useState } from "react";
 import GigOverview from "./overview/GigOverview";
 import GigPostDone from "./overview/GigpostDone";
@@ -12,7 +12,6 @@ import GigGallery from "./gallery/GigGallery";
 import StepsSideBar from "./StepsSideBar";
 
 const GigPostLayout = () => {
-
   const { token } = theme.useToken();
   const [current, setCurrent] = useState(0);
   const prev = () => {
@@ -20,28 +19,52 @@ const GigPostLayout = () => {
   };
   const steps = [
     {
-      title: <Box >Overview</Box>,
-      content: <GigOverview />,
+      title: <Box>Overview</Box>,
+      content: (
+        <Box>
+          <GigOverview />
+        </Box>
+      ),
     },
     {
-      title: <Box >Pricing</Box>,
-      content: <GigPricing />,
+      title: <Box>Pricing</Box>,
+      content: (
+        <Box>
+          <GigPricing />
+        </Box>
+      ),
     },
     {
-      title: <Box >Description & FAQ</Box>,
-      content: <GigDescription />,
+      title: <Box>Description & FAQ</Box>,
+      content: (
+        <Box>
+          <GigDescription />
+        </Box>
+      ),
     },
     {
-      title: <Box >Requirements</Box>,
-      content: <GigRequirement />,
+      title: <Box>Requirements</Box>,
+      content: (
+        <Box>
+          <GigRequirement />
+        </Box>
+      ),
     },
     {
-      title: <Box >Gallery</Box>,
-      content: <GigGallery />,
+      title: <Box>Gallery</Box>,
+      content: (
+        <Box>
+          <GigGallery />
+        </Box>
+      ),
     },
     {
-      title: <Box >Publish</Box>,
-      content: <GigPublish prev={prev} />,
+      title: <Box>Publish</Box>,
+      content: (
+        <Box>
+          <GigPublish prev={prev} />
+        </Box>
+      ),
     },
   ];
   const next = () => {
@@ -58,23 +81,8 @@ const GigPostLayout = () => {
   };
   return (
     <>
-    
-        <StepsSideBar>
-          <Box >
-          <Steps
-            current={current}
-            className="gigpost_Container_steps"
-            items={items}
-            direction={"vertical"}
-            responsive={true}
-            size="small"
-            labelPlacement="vertical"
-          />
-        
-          </Box>
-          </StepsSideBar>
-      <Flex>
-        <Box px={{ base: "0", md: "10" }} display={{base:"none",md:"none",lg:"block"}} gap={{lg:"5"}}>
+      <StepsSideBar>
+        <Box>
           <Steps
             current={current}
             className="gigpost_Container_steps"
@@ -85,12 +93,34 @@ const GigPostLayout = () => {
             labelPlacement="vertical"
           />
         </Box>
-        <Box style={contentStyle}
-         borderLeft={{ sm:"none", md:"none",lg:`2px solid ${token.colorBorder}`}}
-         
-         >
-          {steps[current].content}</Box>
-      </Flex>
+      </StepsSideBar>
+      <Box display={"flex"}>
+        <Box
+          px={{ base: "0", md: "10" }}
+          display={{ base: "none", md: "none", lg: "block" }}
+          gap={{ lg: "5" }}
+        >
+          <Steps
+            current={current}
+            className="gigpost_Container_steps"
+            items={items}
+            direction={"vertical"}
+            responsive={true}
+            size="small"
+            labelPlacement="vertical"
+          />
+        </Box>
+        <Box
+          style={contentStyle}
+          borderLeft={{
+            sm: "none",
+            md: "none",
+            lg: `2px solid ${token.colorBorder}`,
+          }}
+        >
+          {steps[current].content}
+        </Box>
+      </Box>
       <Box
         style={{
           marginTop: 44,
@@ -98,7 +128,11 @@ const GigPostLayout = () => {
           borderTop: "1px solid #c5c5c5",
           paddingTop: 20,
         }}
-        justifyContent={{base:"space-evenly",md:"flex-end",lg:"flex-end"}}
+        justifyContent={{
+          base: "space-evenly",
+          md: "flex-end",
+          lg: "flex-end",
+        }}
       >
         {current < steps.length - 1 && (
           <Button type="primary" onClick={() => next()}>

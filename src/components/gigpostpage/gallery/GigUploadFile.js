@@ -50,15 +50,14 @@ export function ImagePicker({
   return (
     <Box
       style={{
-      
         border: "1px solid #cecece",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         cursor: "pointer",
       }}
-      w={{base:"160px",md:"200px","lg":"200px"}}
-      h={{base:"140px",md:"180px","lg":"180px"}}
+      w={{ base: "160px", md: "200px", lg: "200px" }}
+      h={{ base: "140px", md: "180px", lg: "180px" }}
       onDrop={handleDrop}
       onDragOver={handleDragOver}
       onClick={handleClick}
